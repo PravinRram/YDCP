@@ -1,5 +1,5 @@
 # YDCP
-# WebDev Workshop [2023/2024]
+WebDev Workshop [2023/2024]
 
 # How to view the code using Github Pages:
 
