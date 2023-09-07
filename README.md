@@ -13,5 +13,5 @@ the website should be 'https://theqwertykeyboard.github.io/YDCP/Exercise1.html'
 
 [this is meant to be for my reference if I forget how to do this]
 
-===================================================================================================================
+============================================================================================
 
