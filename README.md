@@ -8,8 +8,8 @@ https://theqwertykeyboard.github.io/YDCP
 
 Then type in the code name at the end of the website
 
-eg to see 'Exercise1.html' (found under "YDCP WebDev Session 3 - Intro to HTML"),
-the website should be 'https://theqwertykeyboard.github.io/YDCP/Exercise1.html'
+eg to see 'Exercise1.html' (found under "Session 3 - Intro to HTML" Directory),
+the website should be 'https://theqwertykeyboard.github.io/YDCP/Session 3 - Intro to HTML/Exercise1.html'
 
 [this is meant to be for my reference if I forget how to do this]
 
