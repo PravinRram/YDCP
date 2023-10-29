@@ -13,4 +13,11 @@ the website should be 'https://theqwertykeyboard.github.io/YDCP/Session-3_Intro-
 
 [this is meant to be for my reference if I forget how to do this]
 
-============================================================================================
+=================================================
+
+To see the website itself when there's CSS/Javascript involved, you only need to look up for the html file in your searchbar
+
+eg to see 'Exercise4_html.html' (found under "Session-5_CSS-Fundamentals" Directory),
+the website should be 'https://theqwertykeyboard.github.io/YDCP/Session-5_CSS-Fundamentals/Exercise4_html.html'
+
+=================================================
