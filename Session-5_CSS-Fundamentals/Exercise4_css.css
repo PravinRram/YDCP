@@ -1,0 +1,62 @@
+body {
+    background-color: black;
+
+    color: white;
+
+    font-family: 'Source Sans Pro', sans-serif;
+
+
+}
+
+a {
+    color: lightskyblue;
+}
+
+a:hover {
+    color: pink;
+}
+
+strong, em {
+    color: yellow;
+}
+
+h2 {
+    color: coral;
+}
+
+p {
+    text-align: justify;
+}
+
+.container-1 {
+    margin: auto;
+
+    width:98%
+}
+
+.main-header {
+    text-align: center;
+}
+
+.main-header h1 {
+    color: orange;
+
+    font-variant: small-caps;
+}
+
+th {
+    color: gold;
+    font-variant: small-caps;
+}
+
+td{
+    text-align:center;
+}
+
+tbody.red-highlight {
+    color: red;
+}
+
+#red-highlight {
+    color: red;
+}

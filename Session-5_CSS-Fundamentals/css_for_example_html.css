@@ -1,0 +1,244 @@
+/* video used: https://www.youtube.com/watch?v=yfoY53QXEnI */
+
+/*
+* {
+    margin: 0;
+    padding: 0;
+}
+*/
+
+body {
+    background-color: #f4f4f4;
+    color: #555;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+
+    /* shorter way of above for font: */
+    font: normal 16px Arial, Helvetica, sans-serif;
+
+    line-height: 1.2em;
+    
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+
+    color: black;
+}
+
+a:hover {
+    color: purple;
+}
+
+a:active {
+    color: blue;
+}
+
+.container_1 {
+    width: 80%;
+    /* better than using px because allows for responsiveness */
+    
+    margin: auto;
+}
+
+.button {
+    background-color: #333;
+    color: #fff;
+
+    padding: 10px 15px;
+
+    border: none
+}
+
+.button:hover {
+    background-color: lightcyan;
+    color: black;
+}
+
+.clr {
+    clear: both;
+}
+
+.box_1 {
+    background-color: #333;
+    color: #fff;
+
+    border-right: 5px red solid;
+    border-top: 5px red solid;
+    border-bottom: 5px red solid;
+    border-left: 5px red solid;
+
+    /* shorter way of above for border: */
+    border: 5px red solid;
+
+    border-width: 3px;
+    border-bottom-width: 10px;
+    border-top-style: dotted;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    /* shorter way of above for padding: */
+    padding: 20px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 0;
+    margin-left: 0;
+
+    /* shorter way of above for margin: */
+    margin: 20px 0;
+}
+
+.box_1 h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 800;
+    font-style: italic;
+
+    text-decoration: underline;
+    text-transform: uppercase;
+
+    letter-spacing: 0.2em;
+    word-spacing: 1em;
+}
+
+.box_2 {
+    border: 3px lightgrey dotted;
+
+    padding: 20px;
+
+    margin: 20px 0;
+}
+
+.categories {
+    border: 1px lightgrey solid;
+    border-radius: 15px;
+
+    padding: 10px;
+}
+
+.categories h2 {
+    text-align: center;
+}
+
+.categories ul {
+    padding: 0;
+
+    list-style: square;
+    list-style: none;
+}
+
+.categories li {
+    padding: 6px;
+
+    border-bottom: 1px dotted black;
+}
+
+.form_1 {
+    padding: 20px;
+}
+
+.form_1 .form_group_1 {
+    padding-bottom: 15px;
+}
+
+.form_1 label {
+    display: block;
+}
+
+.form_1 input[type="text"], .form_1 input[type="email"], .form_1 textarea {
+    padding: 8px;
+    width: 100%;
+}
+
+.block_1 {
+    float: left;
+
+    width: 33.3%;
+
+    padding: 10px;
+
+    border: 1px black solid;
+
+    box-sizing: border-box;
+}
+
+#main_block {
+    float: left;
+    
+    width: 70%;
+}
+
+#sidebar {
+    float: right;
+    
+    width: 30%;
+
+    background-color: #333;
+    color: #fff;
+
+    padding: 15px;
+
+    box-sizing: border-box;
+}
+
+.p-box {
+    width: 800px;
+
+    height: 500px;
+
+    border: 1px black solid;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    position: relative;
+
+    background-image: url("bgimg_example.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.p-box h1 {
+    position: absolute;
+    top: 40px;
+    left: 100px;
+
+    color: white;
+}
+
+.p-box h2 {
+    position: absolute;
+    bottom: 40px;
+    right: 100px;
+
+    color: white;
+}
+
+.fix_me {
+    position: fixed;
+    top: 400px;
+}
+
+.list_1 li:first-child {
+    background-color: dodgerblue;
+}
+
+.list_1 li:last-child {
+    background-color: darkslateblue;
+}
+
+.list_1 li:nth-child(5) {
+    background-color: darkolivegreen;
+}
+
+.list_1 li:nth-child(even) {
+    background-color: pink;
+}
