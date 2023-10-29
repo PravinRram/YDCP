@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Feedback Form</title>
+    </head>
+    <body>
+        <center>
+            <h1>Employee Interests Survey Form</h1>
+            <form action="FeedbackForm_SubmissionSuccess.html" method="post">
+                <label>Enter Your Name:
+                    <input name="name" type="text" required>
+                </label>
+                <br>
+                <br>
+                <label>Enter Your Department:
+                    <input name="department" type="text" required>
+                </label>
+                <br>
+                <br>
+                <label>Tell us a little about yourself:
+                    <textarea name="employee_description" rows="4" required>
+                    </textarea>
+                </label>
+                <br>
+                <br>
+                <label>Do you exercise at home?
+                    <input name="exercise" value="yes" type="radio"> Yes
+                    <input name="exercise" value="no" type="radio"> No
+                </label>
+                <br>
+                <br>
+                <label>How do you like to read about your favourite topics?<br><br>
+                    <input name="favourite_topics" value="books" type="checkbox"> Books
+                    <input name="favourite_topics" value="online_resources" type="checkbox"> Online Rescources
+                    <input name="favourite_topics" value="phone_apps" type="checkbox"> Phone Apps
+                    <input name="favourite_topics" value="magazines" type="checkbox"> Magazines
+                </label>
+                <br>
+                <br>
+                <label>What genre of movies do you like?
+                    <select name="movie_genre">
+                        <option value="comedy">Comedy</option>
+                        <option value="horror">Horror</option>
+                        <option value="romance">Romance</option>
+                        <option value="action">Action</option>
+                    </select>
+                </label>
+                <br>
+                <br>
+                <button type="submit">Submit Form</button>
+            </form>
+        </center>
+    </body>
+</html>

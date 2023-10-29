@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forms</title>
+    </head>
+    <body>
+        <form>
+            <label>Name:<br>
+                <input name="name" type="text"><br>
+            <label>Password:<br>
+                <input name="password" type="password"><br>
+            <label>Email:<br>
+                <input name="email" type="email"><br>
+            <label>Birthday: <br>
+                <input type="date" name="bday" min="1900-01-01" max="2010-12-31"> <br>
+            <label>Gender: <br>
+                <input type="radio" name="gender" value="male"> Male
+                <input type="radio" name="gender" value="female"> Female<br>
+            <label>Favourite Colour: <br>
+                <input type="color" name="favcolor"><br>
+            <label>Photo: <br>
+                <input type="file" name="profilepic"><br>
+            <label>Contact Preference: <br>
+                <input type="checkbox" name="viaemail" value="viaemail"> Email
+                <input type="checkbox" name="viaphone" value="viaphone"> Phone
+                <input type="checkbox" name="viamail" value="viamail"> Mail <br>
+            <label>Rate our Form: <br>
+                <input type="range" min="1" max="10" value="7"> <br>
+            <label>Movie Genre:
+                <select name="genre">
+                    <option value="horror">Horror</option>
+                    <option value="romance">Romance</option>
+                    <option value="comedy">Comedy</option>
+                    <option value="action">Action</option>
+                </select> <br>
+            <label>Comments: <br> 
+                <textarea name="message" rows="5" cols="30">
+                </textarea> <br><br> 
+            <button type="submit">Register</button> 
+            <button type="reset">Clear Form</button>
+        </form>
+        </form>
+    </body>
+</html>
