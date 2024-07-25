@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title>Javascript Calculator</title>
+        <style>
+            table {width: auto;}
+
+            input {padding: 10px; width: 90px; height: 90px; font-size: 45px;}
+
+            #calc-display {height: 50px; font-size: 50px;}
+        </style>
+    </head>
+
+    <body>
+        <h2 id="calc-display"></h2>
+        <br>
+
+        <table>
+            <tr>
+                <td><input id="one" type="button" onclick="click(1)" value="1"></td>
+                <td><input id="two" type="button" onclick="click(2)" value="2"></td>
+                <td><input id="three" type="button" onclick="click(3)" value="3"></td>
+            </tr>
+            <tr>
+                <td><input id="four" type="button" onclick="click(4)" value="4"></td>
+                <td><input id="five" type="button" onclick="click(5)" value="5"></td>
+                <td><input id="six" type="button" onclick="click(6)" value="6"></td>
+            </tr>
+            <tr>
+                <td><input id="seven" type="button" onclick="click(7)" value="7"></td>
+                <td><input id="eight" type="button" onclick="click(8)" value="8"></td>
+                <td><input id="nine" type="button" onclick="click(9)" value="9"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input id="zero" type="button" onclick="click(0)" value="0"></td>
+                <td></td>
+            </tr>
+
+            <tr></tr>
+
+            <tr>
+                <td><input id="plus" type="button" onclick="clickPlus()" value="+">
+                <td><input id="minus" type="button" onclick="clickMinus()" value="-">
+                <td><input id="times" type="button" onclick="clickTimes()" value="x">
+                <td><input id="divide" type="button" onclick="clickDivide()" value="/">
+            </tr>
+
+            <tr>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td><input id="clear" type="button" onclick="clickClear()" value="C"></td>
+                <td><input id="equal" type="button" onclick="clickEquals()" value="="></td>
+            </tr>
+        </table>
+
+        <script>
+            var expression = "";
+
+            function click(value) {
+                document.getElementById("calc-display").innerHTML = expression + value;
+            }
+
+            function clickPlus() {
+                expression = expression + "+";
+                document.getElementById("display").innerHTML = expression
+            }
+
+            function clickMinus() {
+                expression = expression + "-";
+                document.getElementById("display").innerHTML = expression
+            }
+
+            function clickTimes() {
+                expression = expression + "*";
+                document.getElementById("display").innerHTML = expression
+            }
+
+            function clickDivide() {
+                expression = expression + "/";
+                document.getElementById("display").innerHTML = expression
+            }
+
+            function clickClear() {
+                expression = '' ;
+                document.getElementById("display").innerHTML = expression
+            }
+
+            function clickEquals() {
+                expression = eval(expression) ;
+                document.getElementById("display").innerHTML = expression
+            }
+
+        </script>
+    </body>
+</html>

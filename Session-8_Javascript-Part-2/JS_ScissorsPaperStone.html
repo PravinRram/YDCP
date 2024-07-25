@@ -1,0 +1,153 @@
+<html>
+    <head>
+        <title>JS Scissors, Paper, Stone</title>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>You</td>
+                <td>Opponent</td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" onclick="scissors()" style="padding: 4px; width: 70px; margin-top: 5px;">Scissors</button>
+                </td>
+                <td></td>
+            <tr>   
+                <td>
+                    <button type="button" onclick="paper()" style="padding: 4px; width: 70px; margin-top: 5px;">Paper</button>
+                </td>
+                <td>
+                    <label id="opponent"></label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" onclick="stone()" style="padding: 4px; width: 70px; margin-top: 5px;">Stone</button>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+        <p>Increase your volume! (Not too loud though)</p>
+        <br>
+        <p id="message"></p>
+
+        <br>
+        <br>
+        <p id="myScore"></p>
+        <p id="computerScore"></p>
+
+        <script>
+            var myChoice = "";
+            var computerChoice = "";
+            var message = "";
+            var winner_message = ";"
+            var myScore = 0;
+            var computerScore = 0;
+
+            var audioLose = new Audio("lose.wav")
+            var audioWin = new Audio("win.wav")
+
+            function getWinner() {
+                if (myScore==5) {
+                    audioWin.play()
+
+                    winner_message = alert("You are the winner of this game!")
+                }
+
+                else if (computerScore==5) {
+                    audioLose.play()
+
+                    winner_message = alert("The Computer has won this game!")
+                }
+            }
+
+            function scissors() {
+                myChoice = "scissors";
+                opponentChoice();
+                results()
+                document.getElementById("message").innerHTML = message;
+                document.getElementById("myScore").innerHTML = "Your score is: " + myScore;
+                document.getElementById("computerScore").innerHTML = "Computer score is: " + computerScore;
+                getWinner()
+            }
+
+            function paper() {
+                myChoice = "paper";
+                opponentChoice();
+                results()
+                document.getElementById("message").innerHTML = message;
+                document.getElementById("myScore").innerHTML = "Your score is: " + myScore;
+                document.getElementById("computerScore").innerHTML = "Computer score is: " + computerScore;
+                getWinner()
+            }
+
+            function stone() {
+                myChoice = "stone";
+                opponentChoice();
+                results()
+                document.getElementById("message").innerHTML = message;
+                document.getElementById("myScore").innerHTML = "Your score is: " + myScore;
+                document.getElementById("computerScore").innerHTML = "Computer score is: " + computerScore;
+                getWinner()
+            }
+
+            function opponentChoice () {
+                var randomNo = Math.floor(Math.random() * 3)
+                if (randomNo == 0) {
+                    computerChoice = "scissors"
+                }
+                else if (randomNo == 1) {
+                    computerChoice = "paper"
+                }
+                else {
+                    computerChoice = "stone" 
+                }
+
+                document.getElementById("opponent").innerHTML = computerChoice;
+                document.getElementById("opponent").style ="background-color: olivedrab; border: 1px; border-color: black; border-style: solid; border-radius: 5px; padding: 4px; margin-top: 10px;"
+            }
+
+            function results() {
+                if (myChoice == computerChoice) {
+                    message = "Draw!"
+                    myScore = myScore + 0;
+                    computerScore = computerScore + 0;
+                }
+                else if (myChoice == "scissors" && computerChoice == "paper") {
+                    message = "You win!"
+                    myScore = myScore + 1;
+                    computerScore = computerScore + 0;
+                }
+                else if (myChoice == "scissors" && computerChoice == "stone") {
+                    message = "You lose!"
+                    myScore = myScore + 0;
+                    computerScore = computerScore + 1;
+                }
+                else if (myChoice == "paper" && computerChoice == "scissors") {
+                    message = "You lose!"
+                    myScore = myScore + 0;
+                    computerScore = computerScore + 1;
+                }
+                else if (myChoice == "paper" && computerChoice == "stone") {
+                    message = "You win!"
+                    myScore = myScore + 1;
+                    computerScore = computerScore + 0;
+                }
+                else if (myChoice == "stone" && computerChoice == "scissors") {
+                    message = "You win!"
+                    myScore = myScore + 1;
+                    computerScore = computerScore + 0;
+                }
+                else if (myChoice == "stone" && computerChoice == "paper") {
+                    message = "You lose!"
+                    myScore = myScore + 0;
+                    computerScore = computerScore + 1;
+                }
+
+            }
+
+
+        </script>
+    </body>
+</html>
