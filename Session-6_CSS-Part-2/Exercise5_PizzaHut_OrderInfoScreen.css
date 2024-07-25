@@ -1,0 +1,153 @@
+@font-face {
+    font-family: ADELIA;
+    src: url(ADELIA.otf);
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: Winkle;
+    src: url(Winkle-Regular.ttf);
+}
+
+@font-face {
+    font-family: Poppins-Bold;
+    src: url(Poppins/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: Poppins-Italics;
+    src: url(Poppins/Poppins-Italic.ttf);
+}
+
+body {
+    background-color: black;
+    color: white;
+
+    font: normal 16px 'Poppins';
+}
+
+a {
+    color: #F9EEC9;
+}
+
+a:hover {
+    color: #E4B455;
+}
+
+.title-1 {
+    text-align: center;
+    color: orange;
+
+    font-family: 'ADELIA';
+
+    text-decoration: underline;
+
+    margin-bottom: 5% ;
+}
+
+.title-1 a {
+    color: orange;
+}
+
+.title-1 a:hover {
+    color: #E4B455;
+}
+
+legend {
+    padding-left: 10px;
+
+    font: normal 30px Winkle;
+}
+
+fieldset {
+    background-color: #90a74c;
+
+    border: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+fieldset a {
+    padding-left: 10px;
+
+    float: left;
+}
+
+.form-1 {
+    padding-left: 30px;
+    padding-right: 50%;
+    padding-bottom: 30px;
+    float: left;    
+}
+
+.form-1 label {
+    color: #B4000F;
+    font-family: 'Poppins-Bold';
+    padding-right: 0;
+    text-align: left;
+}
+
+.form-1 input , select , textarea {
+    float: left;
+    margin-left: 20px;
+}
+
+.form-1 input[type="password"] {
+    margin-bottom: 10px;
+}
+
+.button-1 {
+    font: normal 20px 'Winkle';
+
+    color: white;
+
+    background-color: green;
+
+    border: 0;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.button-container-1 {
+    float: left;
+    display: flex;
+}
+
+.button-1:hover {
+    background-color: black;
+}
+
+.link-1 {
+    white-space: nowrap;
+    padding-right: 100%;
+}
+
+.link-2 {
+    font: normal 16px 'Poppins-Italics';
+    text-align: center;
+}
+
+.form-1 .form-express-delivery {
+    display: flex;
+    text-align: left;
+    align-items: baseline;
+
+}
+
+label {
+    white-space: nowrap;
+}
