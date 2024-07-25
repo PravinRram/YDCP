@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>
+            JS Random Number Generator
+        </title>
+    </head>
+
+    <body>
+
+        <h1>Guess a number between 0 and 9</h1>
+        <h3>Press the 'Restart' button after you've correctly guessed the number!</h3>
+        
+        <p>Enter your number:
+            <input type="number" id="guessed-no" min="0" max="9">
+        </p>
+
+        <input type="submit" onclick="showResult()">
+        <input type="button" onclick="pickNumber()" value="Restart">
+
+        <script>
+
+            var random_no = 0;
+
+            function pickNumber() {
+                random_no = Math.floor(Math.random() * 10);
+
+                
+            }
+
+            function showResult() {
+                var guess = document.getElementById("guessed-no").value
+
+                if (guess == random_no) {
+                    alert("That's the correct number!")
+                }
+
+                else {
+                    alert("Oops, try again!")
+                }
+            }
+
+        </script>
+    </body>
+</html>

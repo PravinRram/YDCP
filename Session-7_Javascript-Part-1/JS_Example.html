@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>JS Example</title>
+    </head>
+
+    <body>
+        <h1 id="console-message"></h1>
+        <p>Username:   
+            <input type="text" id="username">
+        </p>
+
+        <input type="submit" onclick="printGreeting()">
+
+        <script>
+            function printGreeting() {
+            
+                var currDate = new Date();
+                var greeting;
+                var username = document.getElementById("username").value;
+
+                if (currDate.getHours() < 12) {
+	                greeting = "Good morning "; 
+                }
+
+                else if (currDate.getHours() < 18) { 
+	                greeting = "Good afternoon "; 
+                }
+
+                else if (currDate.getHours() == 18) { 
+	                greeting = "Good evening "; 
+                }
+
+                else { 
+	                greeting = "Good night "; 
+                }
+
+                console.log(greeting);
+
+                document.getElementById('console-message').innerHTML = greeting + username + "!";
+            }
+        </script>
+    </body>
+</html>

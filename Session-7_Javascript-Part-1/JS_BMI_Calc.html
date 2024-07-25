@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>
+            JS BMI Calculator
+        </title>
+    </head>
+
+    <body>
+        
+        <h1 style="border: 3px; border-style: solid; border-color: black;">Javascript BMI Calculator</h1>
+
+        <h2 id="greeting-resp"></h2>
+        <h2 id="response"></h2>
+
+        <h6 id="rounded"></h6>
+
+        <h3 id="advisory"></h3>
+
+        <p> Your Name: 
+            <input type="text" id="user" required>
+        </p>
+
+        <p> Your Height: 
+            <input type="number" id="height" placeholder="In Metres" min="0.00" required>
+        </p>
+
+        <p> Your Weight: 
+            <input type="number" id="weight" placeholder="In Kilograms" min="0.00" required>
+        </p>
+
+        <input type="submit" onclick="printGreeting(); printBMI(); printAdvisory();">
+
+        <script>
+            function printGreeting() {
+            
+            var currDate = new Date();
+            var greeting;
+            var username = document.getElementById("user").value;
+
+            if (currDate.getHours() < 12) {
+                greeting = "Good morning "; 
+            }
+
+            else if (currDate.getHours() < 18) { 
+                greeting = "Good afternoon "; 
+            }
+
+            else if (currDate.getHours() == 18) { 
+                greeting = "Good evening "; 
+            }
+
+            else { 
+                greeting = "Good night "; 
+            }
+
+            console.log(greeting);
+
+            document.getElementById("greeting-resp").innerHTML = greeting + username + "!";
+
+        }   
+
+            function printBMI() {
+
+                var kg = document.getElementById("weight").value;
+                var m = document.getElementById("height").value
+                var BMI = kg / (m*m)
+
+                BMI_Result = Math.round(BMI*10)/10
+
+                console.log(BMI_Result)
+                document.getElementById("response").innerHTML = "Your height is: " + m + "m, your weight is: " + kg + "kg, and your BMI is: " + BMI_Result + "*";
+                document.getElementById("response").style="background-color: skyblue; border: 3px; border-color: black; border-style: solid; border-radius: 5px; padding: 10px;"
+                document.getElementById("rounded").innerText = "[*Rounded off to 1 decimal place]"
+            }
+
+            function printAdvisory() {
+
+                var advisoryMessage;
+
+                if (BMI_Result <= 18.5) {
+                    advisoryMessage = "underweight";
+                }
+
+                else if (BMI_Result >= 18.6 && BMI_Result <= 22.9) {
+                    advisoryMessage = "normal weight";
+                }
+
+                else if (BMI_Result >= 23.0 && BMI_Result <= 29.9) {
+                    advisoryMessage = "overweight";
+                }
+
+                else if (BMI_Result >= 30.0) {
+                    advisoryMessage = "obese";
+                }
+
+                console.log(advisoryMessage)
+                document.getElementById("advisory").innerHTML = "You are considered " + advisoryMessage;
+
+            }
+        </script>
+    </body>
+</html>
+
+<!-- BMI_Result >= 18.6 && BMI_Result <= 22.9 -->
